@@ -1,0 +1,10 @@
+aws:
+  dynamoDBUrl: http://localhost:8000 #dynamodb docker local
+  accessKey: EMPTY
+  secretKey: EMPTY
+
+spring:
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: create-only #to create auto entity bean
