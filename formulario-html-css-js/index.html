@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Formulário de cadastro" content="Desafio gama, formulário básico para cadastro.">
+    <title>Cadastro Pessoal!</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/modal.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+          <div class="row">
+            <h4>Dados pessoais:</h4>
+            <div class="col-half">
+              <div class="input-group input-group-icon"><input id="nomeCompleto" type="text" placeholder="Nome Completo *"  required/>
+              </div>
+            </div>
+            <div class="col-half">
+                <div class="input-group input-group-icon"><input type="text" placeholder="RG" maxlength="10" onkeypress="$(this).mask('0000000000')"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-half">
+            <div class="input-group input-group-icon"><input type="text" onkeypress="$(this).mask('000.000.000-00');" placeholder="CPF *" id="CPF" required />
+            </div>
+          </div>
+          <div class="col-half">
+              <div class="input-group input-group-icon"><input type="text" placeholder="Data de nascimento" onkeypress="$(this).mask('00/00/0000')" />
+              </div>
+          </div>
+      </div>
+            <div class="row">    
+                <h4>Localização:</h4>
+                <div class="col-half">
+                        <div class="input-group input-group-icon"><input type="text" placeholder="Cep" /></div>
+                </div>
+                <div class="col-half">
+                        <div class="input-group input-group-icon"><input type="text" placeholder="Estado ex (SP)" maxlength="2"/></div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-half">
+                <div class="input-group input-group-icon"><input type="text" placeholder="Cidade" pattern="[A-Z]" /></div>
+              </div>
+              <div class="col-half">
+                <div class="input-group input-group-icon"><input type="text" placeholder="Bairro" /></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-half">
+                <div class="input-group input-group-icon"><input type="text" id="endereco" placeholder="Endereço/logradouro *" required /></div>
+              </div>
+              <div class="col-half">
+                <div class="input-group input-group-icon"><input type="text" placeholder="Numero *" id="numero" required/></div>
+              </div>
+            </div>
+                  <div class="row">
+                   <h4>Sexo:</h4>
+                    <div class="input-group">
+                        <select name="genero" id="genero">
+                            <option value="male" >M = Masculino</option>
+                            <option value="female">F = Feminino</option>
+                        </select>
+                  </div>
+            </div>
+            <div class="row">
+                <h4>Contato:</h4>
+                <div class="col-half">
+                  <div class="input-group input-group-icon"><input type="text" onkeypress="$(this).mask('(00) 00000-0000')" id="telCelular" placeholder="Telefone Celular *" required />
+                  </div>
+                </div>
+                <div class="col-half">
+                    <div class="input-group input-group-icon"><input type="text" placeholder="Telefone Fixo" maxlength="8" />
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+              <!-- BOTAO DE SUBMIT-->
+              <button  id="botaoSubmit" class="buttonClass" >Enviar</button>
+            </div>
+            <div class="row">
+                <h4>Termos e condições</h4>
+                <div class="input-group">
+                  <input id="terms" type="checkbox" /><label for="terms"><a href="#demo-modal" style="text-decoration: none;">TERMO DE CONSENTIMENTO DE ACORDO COM A LEI GERAL DE PROTEÇÃO DE DADOS - LGPD</a> 
+                  </label>
+                </div>
+            </div>
+            <!-- MODAL-->
+            <div id="demo-modal" class="modal">
+              <div class="modal__content">      
+                  <p style="font-size: 20px; text-align: left;">
+                    Ao manifestar sua aceitação para com o presente termo,
+                     o Titular consente e concorda que você autoriza o uso de seus dados, para que
+                        tome decisões referentes ao tratamento de seus
+                         dados pessoais, dados referentes as empresas em que atuem os
+                          usuários ou dados necessários ao usufruto de serviços ofertados
+                           , bem como realize o tratamento de tais dados, envolvendo
+                            operações como as que se referem a coleta, produção, recepção, classificação
+                            , utilização, acesso, reprodução, transmissão, distribuição, processamento,
+                             arquivamento, armazenamento, eliminação, avaliação ou controle da informação,
+                              modificação, comunicação, transferência, difusão ou extração.
+                  </p>     
+                  <div class="modal__footer">
+                    <a href="#" class="modal__close">&times;</a>
+                  </div>            
+              </div>
+              <!-- FIM DO MODAL-->
+          </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script type="module" src="js/Enviar.js"></script>
+    <script type="module" src="/js/valida.js"></script>
+</html>
