@@ -5,10 +5,10 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/imutability-dynamodb" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/r2dbc-mysql" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/imutability-dynamodb" />
+            <option value="$PROJECT_DIR$/r2dbc-mysql" />
           </set>
         </option>
       </GradleProjectSettings>
