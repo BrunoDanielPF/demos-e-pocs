@@ -27,6 +27,12 @@
 > 
 ## testando aplicação
 
+executar na pasta `demo-postgres` o comando:
+
+    docker-compose up
+
+para levantar o container do postgresql localmente e depois executar a aplicação.
+
 ### criando um novo dado 
 ![img.png](img.png)
 
