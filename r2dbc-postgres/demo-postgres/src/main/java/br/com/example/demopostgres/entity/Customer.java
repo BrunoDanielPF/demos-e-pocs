@@ -7,12 +7,10 @@ import org.springframework.data.relational.core.mapping.Table;
 
 @Data
 @ToString
-@Table // optional
+@Table(value = "tb_customer")
 public class Customer {
-
     @Id
     private Integer id;
     private String name;
     private String cpf;
-
 }
