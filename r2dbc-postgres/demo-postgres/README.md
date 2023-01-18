@@ -1,5 +1,10 @@
 ## criando aplicação
 
+### dependências necessárias
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    runtimeOnly 'org.postgresql:r2dbc-postgresql'
 ### configuração necessária
 
     spring.r2dbc.url=r2dbc:postgresql://localhost:5432/customerdb
