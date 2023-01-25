@@ -4,7 +4,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/custom-properties/pom.xml" />
+        <option value="$PROJECT_DIR$/sample-spring-h2/pom.xml" />
       </list>
     </option>
   </component>

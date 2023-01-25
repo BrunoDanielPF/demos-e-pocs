@@ -18,28 +18,49 @@ public class Customer {
         this.name = b.name;
     }
 
-    public static Builder builder() { return new Builder(); }
+    public static Builder builder() {
+        return new Builder();
+    }
 
     @DynamoDbPartitionKey
-    public String accountId() { return this.accountId; }
+    public String accountId() {
+        return this.accountId;
+    }
 
     @DynamoDbSortKey
-    public int subId() { return this.subId; }
+    public int subId() {
+        return this.subId;
+    }
 
-//    @DynamoDbSecondaryPartitionKey(indexNames = "customers_by_name")
-    public String name() { return this.name; }
+    public String name() {
+        return this.name;
+    }
 
     public static final class Builder {
         private String accountId;
         private int subId;
         private String name;
 
-        private Builder() {}
+        private Builder() {
+        }
 
-        public Builder accountId(String accountId) { this.accountId = accountId; return this; }
-        public Builder subId(int subId) { this.subId = subId; return this; }
-        public Builder name(String name) { this.name = name; return this; }
+        public Builder accountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
 
-        public Customer build() { return new Customer(this); }
+        public Builder subId(int subId) {
+            this.subId = subId;
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Customer build() {
+            return new Customer(this);
+        }
     }
 }
