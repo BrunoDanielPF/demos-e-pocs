@@ -16,5 +16,6 @@ public class JerseyConfiguration extends ResourceConfig {
     public void init() {
         register(ClientController.class);
         register(ExceptionMapperGeneric.class);
+        packages("br.com.jersey.demo.demojersey.configuration");
     }
 }

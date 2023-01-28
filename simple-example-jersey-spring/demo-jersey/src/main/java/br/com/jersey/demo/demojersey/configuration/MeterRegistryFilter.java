@@ -11,14 +11,14 @@ import javax.servlet.*;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-@Configuration
-public class MeterRegistryComponent implements Filter {
+//@Configuration
+public class MeterRegistryFilter implements Filter {
 
     private final MeterRegistry registry = Metrics.globalRegistry;
     private final MetricsProperties properties;
 
     @Autowired
-    public MeterRegistryComponent(MetricsProperties properties)  {
+    public MeterRegistryFilter(MetricsProperties properties)  {
         this.properties = properties;
     }
 

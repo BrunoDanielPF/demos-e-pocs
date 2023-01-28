@@ -45,7 +45,6 @@ public class ClientController {
     }
 
     @GET
-    @Path("/client")
     public String getClientName() {
         return clientService.getName();
     }
