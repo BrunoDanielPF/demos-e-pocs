@@ -1,11 +1,12 @@
 package br.com.jersey.demo.demojersey.configuration;
 
-import io.micrometer.core.instrument.*;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Metrics;
+import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.binder.jersey.server.JerseyTags;
 import org.glassfish.jersey.server.ContainerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties;
-import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.*;
 import java.io.IOException;
