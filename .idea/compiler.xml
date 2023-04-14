@@ -2,8 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="com.example-demo" target="17" />
       <module name="demo (1) (br.com.example.metric)" target="17" />
       <module name="demo-aop" target="17" />
+      <module name="demo-aop.main" target="17" />
+      <module name="demo-aop.test" target="17" />
       <module name="demo-jersey" target="17" />
       <module name="demo-mysql" target="17" />
       <module name="demo-mysql.main" target="17" />
@@ -11,6 +14,11 @@
       <module name="demo-postgres" target="17" />
       <module name="demo-postgres.main" target="17" />
       <module name="demo-postgres.test" target="17" />
+      <module name="demo.main" target="17" />
+      <module name="demo.test" target="17" />
+      <module name="dynamodb-component-extension" target="17" />
+      <module name="dynamodb-component-extension.main" target="17" />
+      <module name="dynamodb-component-extension.test" target="17" />
       <module name="imutability.dynamodb.sample" target="17" />
       <module name="imutability.dynamodb.sample.main" target="17" />
       <module name="imutability.dynamodb.sample.test" target="17" />

@@ -76,3 +76,5 @@ tsimple-example-jersey-spring/demo-jersey/src/main/java/br/com/jersey/demo/demoj
 {simple-example-jersey-spring/demo-jersey/src/main/java/br/com/jersey/demo/demojersey/configuration/MeterRegistryFilter.java,c\8\c89d2263daa2702eb6065a00edcb6ab822d64002
 {
 Kspring aop/src/main/java/br/com/example/aop/demoaop/DemoAopApplication.java,2\7\27b380c8ab6e57513a19a672034e05b060422bc1
+Q
+!imutability-dynamodb/build.gradle,2\a\2a8fa5cb0272b3f88f082f4e2878e62fdc473caf
