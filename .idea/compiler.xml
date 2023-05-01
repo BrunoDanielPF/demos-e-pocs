@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="aspect-log-aop" target="17" />
+      <module name="aspect-log-aop.main" target="17" />
+      <module name="aspect-log-aop.test" target="17" />
       <module name="com.example-demo" target="17" />
       <module name="demo (1) (br.com.example.metric)" target="17" />
       <module name="demo-aop" target="17" />

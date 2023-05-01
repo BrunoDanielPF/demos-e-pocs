@@ -5,6 +5,7 @@ import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.sqs.AmazonSQSAsync;
 import com.amazonaws.services.sqs.AmazonSQSAsyncClientBuilder;
+import com.example.sqs.demosqspoc.interceptor.SQSHandlerInterceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
 import org.springframework.context.annotation.Bean;
@@ -18,16 +19,22 @@ public class SQSLocalConfig {
 
     @Bean
     @Primary
-    public AmazonSQSAsync amazonSQSAsync() {
+    public AmazonSQSAsync amazonSQSAsync(SQSHandlerInterceptor sqsHandlerInterceptor) {
         return AmazonSQSAsyncClientBuilder.standard()
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:4566", "sa-east-1"))
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials("xxx", "xxx")))
+                .withRequestHandlers(sqsHandlerInterceptor)
                 .build();
     }
 
     @Bean
-    public QueueMessagingTemplate queueMessagingTemplate() {
-        return new QueueMessagingTemplate(amazonSQSAsync());
+    public SQSHandlerInterceptor sqsHandlerInterceptor() {
+        return new SQSHandlerInterceptor();
+    }
+
+    @Bean
+    public QueueMessagingTemplate queueMessagingTemplate(AmazonSQSAsync amazonSQSAsync) {
+        return new QueueMessagingTemplate(amazonSQSAsync);
     }
 
     @Bean
