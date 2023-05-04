@@ -1,9 +1,9 @@
 # spring-dynamodb sincrono
 
-##como usar
+## como usar
 <p>step 1 - docker-compose up para subir o localstack</p>
 
-create User without ID
+create User
 ```shell
 curl --location 'localhost:8080/v1/user' \
 --header 'Content-Type: application/json' \
