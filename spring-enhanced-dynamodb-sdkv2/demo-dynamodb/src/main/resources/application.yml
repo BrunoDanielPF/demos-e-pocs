@@ -1,2 +1,4 @@
-application:
-  localstack: true
+dynamodb:
+  endpoint: "http://localhost:4566"
+  region: sa-east-1
+  local: true

@@ -9,11 +9,11 @@ import software.amazon.awssdk.services.dynamodb.model.ResourceInUseException;
 import javax.annotation.PostConstruct;
 
 @Configuration
-public class LocalStackConfigure {
+public class AutoCreateTableConfiguration {
 
     private final DynamoDbEnhancedClient dynamoEnhancedDbClient;
 
-    public LocalStackConfigure(DynamoDbEnhancedClient dynamoEnhancedDbClient) {
+    public AutoCreateTableConfiguration(DynamoDbEnhancedClient dynamoEnhancedDbClient) {
         this.dynamoEnhancedDbClient = dynamoEnhancedDbClient;
     }
 
