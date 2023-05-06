@@ -16,6 +16,18 @@ curl --location 'localhost:8080/v1/user' \
 
 ```
 
+retorno
+```json
+{
+    "id": "4407da11-545d-47a8-a332-5de59d96d55a",
+    "name": "teste",
+    "age": "24",
+    "email": "teste@gmail.com",
+    "password": "1234",
+    "createdAt": "2023-05-06T02:09:55.170327500Z"
+}
+```
+
 get users
 
 ```shell
