@@ -1,21 +1,24 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.User;
-import com.example.demo.service.PersonService;
+import com.example.demo.service.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/v1/user")
 public class UserController {
 
     @Autowired
-    private final PersonService service;
+    private final PersonRepository service;
 
-    public UserController(PersonService service) {
+    public UserController(PersonRepository service) {
         this.service = service;
     }
 
@@ -25,14 +28,14 @@ public class UserController {
     }
 
     @GetMapping
-    ResponseEntity<Iterator<User>> getAll() {
+    ResponseEntity<Set<User>> getAll() {
         return ResponseEntity.ok().body(service.getAll());
     }
 
     @PostMapping
     ResponseEntity create(@RequestBody User user) {
-        User newUser = service.create(user);
-        return ResponseEntity.ok().body(newUser);
+        service.create(user);
+        return ResponseEntity.ok().body(true);
     }
 
     @DeleteMapping("/{id}")
