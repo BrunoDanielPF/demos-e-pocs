@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/spring-enhanced-dynamodb-sdkv2/demo-dynamodb/pom.xml" />
+        <option value="$PROJECT_DIR$/custom-properties/pom.xml" />
       </list>
     </option>
   </component>

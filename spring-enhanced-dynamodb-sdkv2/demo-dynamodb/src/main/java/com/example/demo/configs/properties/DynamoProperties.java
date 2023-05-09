@@ -5,7 +5,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "dynamodb")
 public class DynamoProperties {
 
-
     private String endpoint;
 
     private String region;

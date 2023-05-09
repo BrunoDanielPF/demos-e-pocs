@@ -29,6 +29,7 @@ public class AwsConfigLocal {
     }
 
     @Bean
+    @ConditionalOnMissingBean(DynamoDbClient.class)
     public DynamoDbClient dynamoDbClient() {
         return DynamoDbClient.builder()
                 .credentialsProvider(STATIC_CREDENTIALS)

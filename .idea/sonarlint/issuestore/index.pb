@@ -19,10 +19,6 @@ w
 Gr2dbc-mysql/src/main/java/br/com/example/demomysql/entity/Customer.java,b\a\bae532e98bf1c4c44b609f0f2bfe47ff49e2a452
 \
 ,r2dbc-postgres/demo-postgres/settings.gradle,7\f\7f74f70e95914c773432767b8cb73df019802da1
-I
-custom-properties/pom.xml,7\c\7c81143c091873de5e3a16f71ee6da0c385b1ec2
-‹
-[custom-properties/src/main/java/br/com/example/metric/demo/DemoCustomMetricApplication.java,6\e\6ebba8f8f137bd83c06b06cf43cc326f5389dc0b
 n
 >custom-properties/src/main/resources/META-INF/spring.factories,e\b\ebf1c901f987ba8c9365f9a5c117add0b46752df
 k
@@ -47,10 +43,6 @@ Wsample-spring-h2/src/main/java/br/com/example/metric/demo/resources/TestControl
 Psample-spring-h2/src/main/java/br/com/example/metric/demo/demoH2Application.java,0\4\044d567f7a20494de073f87a5cab71a299a3c201
 ~
 Nsample-spring-h2/src/main/java/br/com/example/metric/demo/entity/Customer.java,7\2\724582279e9afe148d00831c039eebd2d7a836a7
-z
-Jcustom-properties/src/main/java/br/com/example/metric/demo/Controller.java,6\8\686a9a15aba42447baaa558b6d1730b6d7b45a78
-…
-Ucustom-properties/src/main/java/br/com/example/metric/demo/prop/CustomProperties.java,f\0\f0caadcdb46cb277e65a570929f124801a90ccd1
 F
 custom-metric/mvnw.cmd,c\3\c314b2f5114316b40db47601e13c4e4d64093175
 „
@@ -76,3 +68,13 @@ tsimple-example-jersey-spring/demo-jersey/src/main/java/br/com/jersey/demo/demoj
 {simple-example-jersey-spring/demo-jersey/src/main/java/br/com/jersey/demo/demojersey/configuration/MeterRegistryFilter.java,c\8\c89d2263daa2702eb6065a00edcb6ab822d64002
 Q
 !imutability-dynamodb/build.gradle,2\a\2a8fa5cb0272b3f88f082f4e2878e62fdc473caf
+X
+(spring-enhanced-dynamodb-sdkv2/README.md,d\1\d1922aa5235434c898459e68984910c7eaa7a6ff
+·
+†spring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/extension/annotation/DynamoDbAutoGeneratePartitionKey.java,f\5\f58bfbab2be862e2e91baa1da11eb6948558ee5a
+g
+7spring-enhanced-dynamodb-sdkv2/demo-dynamodb/.gitignore,8\5\85d4395fc50688f87d556acd705d34ed07ce9705
+Œ
+\spring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/entity/User.java,2\b\2bf815b643433ab377c56b37c27122cd0388f059
+™
+ispring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/service/PersonRepository.java,d\b\dbe848e194fc3a9f1587a5bd3c7e3ba42f082e2c
