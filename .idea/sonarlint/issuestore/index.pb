@@ -1,6 +1,4 @@
 
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 —
 gimutability-dynamodb/src/main/java/br/com/core/imutability/dynamodb/sample/config/LocalstackConfig.java,9\b\9b8253f241714a0d7c0b1d7f33827e16e794fd2b
 —

@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo" />
-        <module name="demo (1) (br.com.example.metric)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +15,8 @@
       <module name="aspect-log-aop.main" target="17" />
       <module name="aspect-log-aop.test" target="17" />
       <module name="com.example-demo" target="17" />
+      <module name="demo (1) (br.com.example.metric)" target="17" />
+      <module name="demo (2) (com.example)" target="17" />
       <module name="demo-aop" target="17" />
       <module name="demo-aop.main" target="17" />
       <module name="demo-aop.test" target="17" />
@@ -26,6 +27,9 @@
       <module name="demo-postgres" target="17" />
       <module name="demo-postgres.main" target="17" />
       <module name="demo-postgres.test" target="17" />
+      <module name="demo-sqs-poc" target="17" />
+      <module name="demo-sqs-poc.main" target="17" />
+      <module name="demo-sqs-poc.test" target="17" />
       <module name="demo.main" target="17" />
       <module name="demo.test" target="17" />
       <module name="dynamodb-component-extension" target="17" />
@@ -46,6 +50,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
       <module name="demo (1) (br.com.example.metric)" options="-parameters" />
+      <module name="demo (2) (com.example)" options="-parameters" />
       <module name="demo-jersey" options="-parameters" />
     </option>
   </component>
