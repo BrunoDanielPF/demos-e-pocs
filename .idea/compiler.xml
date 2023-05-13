@@ -27,9 +27,6 @@
       <module name="demo-postgres" target="17" />
       <module name="demo-postgres.main" target="17" />
       <module name="demo-postgres.test" target="17" />
-      <module name="demo-sqs-poc" target="17" />
-      <module name="demo-sqs-poc.main" target="17" />
-      <module name="demo-sqs-poc.test" target="17" />
       <module name="demo.main" target="17" />
       <module name="demo.test" target="17" />
       <module name="dynamodb-component-extension" target="17" />
