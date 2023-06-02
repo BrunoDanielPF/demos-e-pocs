@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  app:
+    container_name: "app"
+    restart: always
+    image: app-sample-docker-file
+    ports:
+      - "8080:8080"
