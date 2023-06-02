@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.AppTest" time="0.04" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\guiandrei\develop\demos-pocs\my-app-java\target\test-classes;C:\Users\guiandrei\develop\demos-pocs\my-app-java\target\classes;C:\Users\guiandrei\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\guiandrei\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\guiandrei\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Users\guiandrei\.jdks\openjdk-17.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\GUIAND~1\AppData\Local\Temp\surefire12306240871063670975\surefirebooter4479167165369159046.jar C:\Users\guiandrei\AppData\Local\Temp\surefire12306240871063670975 2023-06-01T23-54-36_494-jvmRun1 surefire12458371771862667760tmp surefire_017092221694275615486tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\guiandrei\develop\demos-pocs\my-app-java\target\test-classes;C:\Users\guiandrei\develop\demos-pocs\my-app-java\target\classes;C:\Users\guiandrei\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\guiandrei\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\guiandrei\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\guiandrei"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.home" value="C:\Users\guiandrei\.jdks\openjdk-17.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\guiandrei\develop\demos-pocs\my-app-java"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\GUIAND~1\AppData\Local\Temp\surefire12306240871063670975\surefirebooter4479167165369159046.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.2+8-86"/>
+    <property name="user.name" value="Bruno Daniel"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\guiandrei\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\GUIAND~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2022.3.1"/>
+    <property name="java.version" value="17.0.2"/>
+    <property name="user.dir" value="C:\Users\guiandrei\develop\demos-pocs\my-app-java"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\guiandrei\.jdks\openjdk-17.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\PostgreSQL\14\bin;C:\Users\guiandrei\AppData\Local\JetBrains\Toolbox\scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Docker\Docker\resources\bin;C:\Users\guiandrei\scoop\shims;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\guiandrei\AppData\Local\Microsoft\WindowsApps;C:\Users\guiandrei\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\guiandrei\AppData\Roaming\npm;C:\Users\guiandrei\.dotnet\tools;C:\Program Files\heroku\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;C:\Users\guiandrei\AppData\Local\Jet;C:\Users\guiandrei\AppData\Local\Programs\oh-my-posh\bin;C:\Exercism;C:\Users\guiandrei\AppData\Local\Microsoft\WindowsApps;C:\Users\guiandrei\develop\tools\maven\apache-maven-3.8.6\bin;C:\Users\guiandrei\develop\tools\just-0.11.1-windows-x86_64;C:\Users\guiandrei\develop\tools\apache-maven-3.9.0\bin;C:\Users\guiandrei\develop\tools\gradle-8.0.1\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.2+8-86"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="com.mycompany.app.AppTest" time="0.005"/>
+  <testcase name="shouldReturnAnimalObject" classname="com.mycompany.app.AppTest" time="0"/>
+</testsuite>
