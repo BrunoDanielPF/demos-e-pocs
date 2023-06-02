@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="demo-mysql-spring-3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,6 +15,7 @@
       <module name="aspect-log-aop.main" target="17" />
       <module name="aspect-log-aop.test" target="17" />
       <module name="com.example-demo" target="17" />
+      <module name="demo" target="17" />
       <module name="demo (1) (br.com.example.metric)" target="17" />
       <module name="demo (2) (com.example)" target="17" />
       <module name="demo-aop" target="17" />
@@ -35,6 +36,7 @@
       <module name="imutability.dynamodb.sample" target="17" />
       <module name="imutability.dynamodb.sample.main" target="17" />
       <module name="imutability.dynamodb.sample.test" target="17" />
+      <module name="my-app-java" target="9" />
       <module name="r2bc-mysql" target="17" />
       <module name="r2bc-mysql.main" target="17" />
       <module name="r2bc-mysql.test" target="17" />
@@ -49,6 +51,7 @@
       <module name="demo (1) (br.com.example.metric)" options="-parameters" />
       <module name="demo (2) (com.example)" options="-parameters" />
       <module name="demo-jersey" options="-parameters" />
+      <module name="demo-mysql-spring-3" options="-parameters" />
     </option>
   </component>
 </project>

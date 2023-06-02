@@ -53,9 +53,6 @@ V
 &simple-example-jersey-spring/README.md,4\b\4bbd4fa4a548bf01fa3fc8739ffad8a948f2771c
 `
 0simple-example-jersey-spring/demo-jersey/pom.xml,f\b\fbb74d4847e709a3bafb83e3061407403c5b441b
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 «
 {simple-example-jersey-spring/demo-jersey/src/main/java/br/com/jersey/demo/demojersey/configuration/JerseyConfiguration.java,a\7\a7c7e020f0826df35f96111ba8476eba7109c1e4
 ®
@@ -74,5 +71,5 @@ g
 7spring-enhanced-dynamodb-sdkv2/demo-dynamodb/.gitignore,8\5\85d4395fc50688f87d556acd705d34ed07ce9705
 Œ
 \spring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/entity/User.java,2\b\2bf815b643433ab377c56b37c27122cd0388f059
-™
-ispring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/service/PersonRepository.java,d\b\dbe848e194fc3a9f1587a5bd3c7e3ba42f082e2c
+€
+Pdemo-sqs-poc/src/main/java/com/example/sqs/demosqspoc/DemoSqsPocApplication.java,d\e\de2104c15ba67acbc1b2f9d34e4b1c6eaa77c9e0
