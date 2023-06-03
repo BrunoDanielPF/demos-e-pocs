@@ -26,4 +26,21 @@ CREATE TABLE tb_user (
 
 INSERT INTO tb_user VALUES(1, "name teste")
 ```
+
+criar usuario no banco de dados
+```shell
+curl --request POST \
+  --url http://localhost:8080/users/ \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"name":"teste name"
+}'
+```
+
+listar usuarios no banco de dados 
+
+```shell
+curl --request GET \
+  --url http://localhost:8080/users/
+```
  
