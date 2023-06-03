@@ -1,14 +1,6 @@
-version: "2"
+version: "3"
 
 services:
-  app:
-    container_name: "app"
-    restart: always
-    image: app-sample-docker-file
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
   # MySQL
   db:
     container_name: mysql8
@@ -20,7 +12,15 @@ services:
       MYSQL_PASSWORD: pass
     ports:
       - '3306:3306'
-#    volumes:
-#      - ./table/db:/var/lib/mysql/table
-#      - ./table:/docker-entrypoint-initdb.d
+    volumes:
+#      - ./db_data:/var/lib/mysql/data
+      - ./tbuser.sql:/docker-entrypoint-initdb.d/tbuser.sql
 #  desabilitar DLL para criar atraves do schema sql da pasta table, ou usar propriedade DDL para criar automaticamente e deixar comentado o volume do mysql para nao usar o sql
+  app:
+    container_name: "app"
+    restart: always
+    image: app-sample-docker-file
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db

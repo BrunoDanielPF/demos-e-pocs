@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tb_user;
 
 CREATE TABLE tb_user (
-    id bigint not null auto_increment,
+    id int not null auto_increment,
     name varchar(255) not null,
     primary key (id)
 );
