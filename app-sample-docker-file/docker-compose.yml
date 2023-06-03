@@ -13,7 +13,6 @@ services:
     ports:
       - '3306:3306'
     volumes:
-#      - ./db_data:/var/lib/mysql/data
       - ./tbuser.sql:/docker-entrypoint-initdb.d/tbuser.sql
 #  desabilitar DLL para criar atraves do schema sql da pasta table, ou usar propriedade DDL para criar automaticamente e deixar comentado o volume do mysql para nao usar o sql
   app:
