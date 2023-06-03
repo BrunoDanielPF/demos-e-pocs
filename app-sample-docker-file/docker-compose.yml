@@ -7,3 +7,20 @@ services:
     image: app-sample-docker-file
     ports:
       - "8080:8080"
+    depends_on:
+      - db
+  # MySQL
+  db:
+    container_name: mysql8
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sandbox
+      MYSQL_USER: user_mysql
+      MYSQL_PASSWORD: pass
+    ports:
+      - '3306:3306'
+#    volumes:
+#      - ./table/db:/var/lib/mysql/table
+#      - ./table:/docker-entrypoint-initdb.d
+#  desabilitar DLL para criar atraves do schema sql da pasta table, ou usar propriedade DDL para criar automaticamente e deixar comentado o volume do mysql para nao usar o sql
