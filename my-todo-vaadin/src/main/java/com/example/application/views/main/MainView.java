@@ -13,7 +13,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.Route;
 
-@Route("")
+@Route("index")
 public class MainView extends VerticalLayout {
 
     private TodoRepo repo;
@@ -33,7 +33,6 @@ public class MainView extends VerticalLayout {
                 clearButton,
                 clearAllButton
         );
-
         addButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         addButton.addClickShortcut(Key.ENTER);
         addButton.addClickListener(e -> {
@@ -55,7 +54,7 @@ public class MainView extends VerticalLayout {
             repo.deleteAll();
             refreshTodos();
         });
-
+        setAlignItems(Alignment.CENTER);
         refreshTodos();
     }
 
