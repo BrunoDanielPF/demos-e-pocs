@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-mysql-spring-3" />
+        <module name="mytodo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,11 +23,18 @@
       <module name="demo-aop.test" target="17" />
       <module name="demo-jersey" target="17" />
       <module name="demo-mysql" target="17" />
+      <module name="demo-mysql-spring-3" target="17" />
       <module name="demo-mysql.main" target="17" />
       <module name="demo-mysql.test" target="17" />
       <module name="demo-postgres" target="17" />
       <module name="demo-postgres.main" target="17" />
       <module name="demo-postgres.test" target="17" />
+      <module name="demo-sqs-poc" target="17" />
+      <module name="demo-sqs-poc.main" target="17" />
+      <module name="demo-sqs-poc.test" target="17" />
+      <module name="demo-starter-sns" target="17" />
+      <module name="demo-starter-sns.main" target="17" />
+      <module name="demo-starter-sns.test" target="17" />
       <module name="demo.main" target="17" />
       <module name="demo.test" target="17" />
       <module name="dynamodb-component-extension" target="17" />
@@ -43,6 +50,7 @@
       <module name="r2dbc-mysql" target="17" />
       <module name="r2dbc-mysql.main" target="17" />
       <module name="r2dbc-mysql.test" target="17" />
+      <module name="todo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -52,6 +60,8 @@
       <module name="demo (2) (com.example)" options="-parameters" />
       <module name="demo-jersey" options="-parameters" />
       <module name="demo-mysql-spring-3" options="-parameters" />
+      <module name="mytodo" options="-parameters" />
+      <module name="todo" options="-parameters" />
     </option>
   </component>
 </project>

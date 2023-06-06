@@ -4,7 +4,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/demo-mysql-spring-3/pom.xml" />
+        <option value="$PROJECT_DIR$/my-todo-vaadin/pom.xml" />
       </list>
     </option>
   </component>

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-sqs-poc.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-sqs-poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-sqs-poc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-sqs-poc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-sqs-poc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-sqs-poc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-starter-sns.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-starter-sns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-starter-sns.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-starter-sns.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-starter-sns.test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-starter-sns.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/demos-pocs.iml" filepath="$PROJECT_DIR$/.idea/demos-pocs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-todo-vaadin/mytodo.iml" filepath="$PROJECT_DIR$/my-todo-vaadin/mytodo.iml" />
     </modules>
   </component>
 </project>
