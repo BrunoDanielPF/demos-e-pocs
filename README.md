@@ -1,1 +1,0 @@
-# Repositório de testes para estudar conceitos e serviços
