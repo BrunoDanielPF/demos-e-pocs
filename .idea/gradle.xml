@@ -5,11 +5,21 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app-sample-docker-file" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-cloud-configuration/spring-cloud-config-client" />
         <option name="gradleHome" value="$PROJECT_DIR$/../tools/gradle-8.0.1" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/app-sample-docker-file" />
+            <option value="$PROJECT_DIR$/spring-cloud-configuration/spring-cloud-config-client" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/spring-cloud-configuration/spring-cloud-config-server" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../tools/gradle-8.0.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/spring-cloud-configuration/spring-cloud-config-server" />
           </set>
         </option>
       </GradleProjectSettings>

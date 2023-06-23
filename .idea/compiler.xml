@@ -11,6 +11,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="app-sample-docker-file" target="11" />
+      <module name="app-sample-docker-file.main" target="11" />
+      <module name="app-sample-docker-file.test" target="11" />
       <module name="aspect-log-aop" target="17" />
       <module name="aspect-log-aop.main" target="17" />
       <module name="aspect-log-aop.test" target="17" />
@@ -43,7 +46,6 @@
       <module name="imutability.dynamodb.sample" target="17" />
       <module name="imutability.dynamodb.sample.main" target="17" />
       <module name="imutability.dynamodb.sample.test" target="17" />
-      <module name="my-app-java" target="9" />
       <module name="r2bc-mysql" target="17" />
       <module name="r2bc-mysql.main" target="17" />
       <module name="r2bc-mysql.test" target="17" />
