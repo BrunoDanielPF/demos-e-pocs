@@ -103,9 +103,5 @@ y
 Ispring-ws-server-chat-room/src/main/java/br/com/chat/ChatApplication.java,0\4\0466744dac16628f100ca6984e072d7df7f7c71f
 R
 "spring-ws-server-chat-room/pom.xml,5\6\56b70e184bc3d50e803a621053b99a2e9be4917f
-€
-Pspring-ws-server-chat-room/src/main/java/br/com/chat/config/WebSocketConfig.java,3\9\390cdb811105265dd9900e9406b3a3fd7df36d10
-ƒ
-Sspring-ws-server-chat-room/src/main/java/br/com/chat/controller/ChatController.java,a\1\a1178edce6fe22f4c09b05d63ef4f0e5066c172b
 w
 Gspring-ws-server-chat-room/src/main/java/br/com/chat/model/Message.java,6\a\6ae2f6c35d9187466488d2cccde60c4e46b51cc0
