@@ -1,1 +1,2 @@
-org.springframework.boot.env.EnvironmentPostProcessor=br.com.example.metric.demo.prop.CustomProperties
+org.springframework.boot.env.EnvironmentPostProcessor=br.com.example.metric.demo.prop.CustomPropertiesEnvironmentPostProcessorImpl
+org.springframework.context.ApplicationContextInitializer=br.com.example.metric.demo.prop.CustomPropertiesApplicationContextInitializerImpl

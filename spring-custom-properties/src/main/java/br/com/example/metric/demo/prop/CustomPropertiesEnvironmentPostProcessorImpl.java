@@ -10,13 +10,13 @@ import org.springframework.core.env.PropertiesPropertySource;
 import java.util.Properties;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
-public class CustomProperties implements EnvironmentPostProcessor {
+public class CustomPropertiesEnvironmentPostProcessorImpl implements EnvironmentPostProcessor {
 
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         String name = application.getMainApplicationClass().getName();
         Properties properties = new Properties();
         properties.put("propertie-application-name-identifie", name);
-        environment.getPropertySources().addFirst(new PropertiesPropertySource("Custom-properties-source", properties));
+        environment.getPropertySources().addFirst(new PropertiesPropertySource("Custom-properties-source-environment-post-processor", properties));
     }
 }

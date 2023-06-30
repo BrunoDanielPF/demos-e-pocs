@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
         <module name="chat" />
         <module name="my-app-java" />
       </profile>
@@ -19,7 +20,6 @@
       <module name="aspect-log-aop.main" target="17" />
       <module name="aspect-log-aop.test" target="17" />
       <module name="com.example-demo" target="17" />
-      <module name="demo" target="17" />
       <module name="demo (1) (br.com.example.metric)" target="17" />
       <module name="demo (2) (com.example)" target="17" />
       <module name="demo-aop" target="17" />
