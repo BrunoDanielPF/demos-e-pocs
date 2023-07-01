@@ -69,12 +69,6 @@ N
 app-sample-docker-file/gradlew,b\4\b4ae9c675e9cf427c9d30834f27df70321f2d7fe
 Q
 !app-sample-docker-file/Dockerfile,9\5\95fbf2a1720d2e13a6dc1532e88be8b2b296ea8d
-r
-Bspring-cloud-configuration/spring-cloud-config-client/build.gradle,a\c\acdcd5e297f0bcea4789fdc57d96a86a0a1c645a
-ª
-zspring-cloud-configuration/spring-cloud-config-server/src/main/java/br/com/example/config/server/demo/DemoApplication.java,1\d\1d982c57845e02a8b67195e0616ed5c05689d57c
-Ñ
- spring-cloud-configuration/spring-cloud-config-client/src/main/java/br/com/example/config/client/springcloudconfigclient/SpringCloudConfigClientApplication.java,e\4\e457afa6bfad1f63db10c9c073ae02cae20f4d8b
 i
 9my-app-java/src/main/java/com/mycompany/app/Customer.java,9\a\9ab80ea5fad55ff2b0b88c1f0362de101f4cc56f
 e
