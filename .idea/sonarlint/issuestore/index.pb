@@ -43,16 +43,12 @@ X
 (spring-enhanced-dynamodb-sdkv2/README.md,d\1\d1922aa5235434c898459e68984910c7eaa7a6ff
 ∑
 Üspring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/extension/annotation/DynamoDbAutoGeneratePartitionKey.java,f\5\f58bfbab2be862e2e91baa1da11eb6948558ee5a
-g
-7spring-enhanced-dynamodb-sdkv2/demo-dynamodb/.gitignore,8\5\85d4395fc50688f87d556acd705d34ed07ce9705
 å
 \spring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/entity/User.java,2\b\2bf815b643433ab377c56b37c27122cd0388f059
 C
 Spring_Tech/pom.xml,f\b\fbc9ee0031dc28dc2c0214f5bc76c53dd93e2a22
 P
  app-sample-docker-file/README.md,f\0\f00d70fc270399c3b5957039e0b223ec59a16792
-Q
-!app-sample-docker-file/.gitignore,3\3\3329c7e3abad0a2e79cd5d2967be1654e0f71a53
 ê
 `spring-enhanced-dynamodb-sdkv2/demo-dynamodb/src/main/java/com/example/demo/DemoApplication.java,2\d\2db9d52e8cd20ead6cecc5e247272511f37d0fc7
 d
