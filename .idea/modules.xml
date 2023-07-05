@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-ws-server-chat-room/chat.iml" filepath="$PROJECT_DIR$/spring-ws-server-chat-room/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-custom-properties/demo.iml" filepath="$PROJECT_DIR$/spring-custom-properties/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-sqs-poc.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-sqs-poc.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-sqs-poc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-sqs-poc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-sqs-poc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-sqs-poc.test.iml" />
@@ -9,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-starter-sns.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-starter-sns.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo-starter-sns.test.iml" filepath="$PROJECT_DIR$/.idea/modules/demo-starter-sns.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/demos-pocs.iml" filepath="$PROJECT_DIR$/.idea/demos-pocs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud-config-client.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud-config-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-cloud-config-server.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-cloud-config-server.iml" />
     </modules>
   </component>
 </project>

@@ -65,14 +65,8 @@ N
 app-sample-docker-file/gradlew,b\4\b4ae9c675e9cf427c9d30834f27df70321f2d7fe
 Q
 !app-sample-docker-file/Dockerfile,9\5\95fbf2a1720d2e13a6dc1532e88be8b2b296ea8d
-i
-9my-app-java/src/main/java/com/mycompany/app/Customer.java,9\a\9ab80ea5fad55ff2b0b88c1f0362de101f4cc56f
-e
-5my-app-java/src/main/java/com/mycompany/app/User.java,8\d\8dab813f268f64360e12b9cb27ec6fc00281a2a6
 C
 my-app-java/pom.xml,4\b\4b9c529c192324eb6871106f420686e471daebae
-d
-4my-app-java/src/main/java/com/mycompany/app/App.java,9\9\992f50dd2162d6223adfbedda7f128a35b121403
 ‹
 [my-app-java/src/main/java/com/mycompany/app/exceptions/IllegalArgumentExceptionExample.java,4\3\43d1fd0b7044a8083d3b332e09ed4dfb437db094
 |
