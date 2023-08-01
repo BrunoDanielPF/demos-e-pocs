@@ -11,7 +11,8 @@ import static net.dv8tion.jda.api.interactions.commands.OptionType.STRING;
 
 public class Bot extends ListenerAdapter {
     public static void main(String[] args) {
-        JDA jda = JDABuilder.createDefault("MTEzNTcxNzgzNjM3NTk5ODY4NA.G0SpC2.DSmCA7ilYTP0iCrC7QpfrNejcRQStEcnUyzarQ")
+
+        JDA jda = JDABuilder.createDefault("token")
                 .addEventListeners(new Bot())
                 .setActivity(Activity.playing("Type /ping"))
                 .build();

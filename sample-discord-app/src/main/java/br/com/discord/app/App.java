@@ -14,7 +14,7 @@ import net.dv8tion.jda.api.hooks.EventListener;
  */
 public class App implements EventListener {
     public static void main( String[] args ) throws InterruptedException {
-        JDA jdaClient = JDABuilder.createDefault("MTEzNTcxNzgzNjM3NTk5ODY4NA.G0SpC2.DSmCA7ilYTP0iCrC7QpfrNejcRQStEcnUyzarQ")
+        JDA jdaClient = JDABuilder.createDefault("token")
                 .addEventListeners(new App())
                 .setActivity(Activity.of(Activity.ActivityType.STREAMING, "teste mil"))
                 .build();
