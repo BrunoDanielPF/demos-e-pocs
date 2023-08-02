@@ -7,9 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
-        <module name="chat" />
-        <module name="my-app-java" />
+        <module name="sample-discord-app" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,7 +17,9 @@
       <module name="aspect-log-aop" target="17" />
       <module name="aspect-log-aop.main" target="17" />
       <module name="aspect-log-aop.test" target="17" />
+      <module name="chat" target="1.8" />
       <module name="com.example-demo" target="17" />
+      <module name="demo" target="17" />
       <module name="demo (1) (br.com.example.metric)" target="17" />
       <module name="demo (2) (com.example)" target="17" />
       <module name="demo-aop" target="17" />
@@ -47,6 +47,7 @@
       <module name="imutability.dynamodb.sample" target="17" />
       <module name="imutability.dynamodb.sample.main" target="17" />
       <module name="imutability.dynamodb.sample.test" target="17" />
+      <module name="my-app-java" target="9" />
       <module name="mytodo" target="17" />
       <module name="r2bc-mysql" target="17" />
       <module name="r2bc-mysql.main" target="17" />
@@ -54,6 +55,15 @@
       <module name="r2dbc-mysql" target="17" />
       <module name="r2dbc-mysql.main" target="17" />
       <module name="r2dbc-mysql.test" target="17" />
+      <module name="spring-cloud-config-client" target="17" />
+      <module name="spring-cloud-config-client.main" target="17" />
+      <module name="spring-cloud-config-client.test" target="17" />
+      <module name="spring-cloud-config-server" target="17" />
+      <module name="spring-cloud-config-server.main" target="17" />
+      <module name="spring-cloud-config-server.test" target="17" />
+      <module name="spring-demo-cache-guava" target="11" />
+      <module name="spring-demo-cache-guava.main" target="11" />
+      <module name="spring-demo-cache-guava.test" target="11" />
       <module name="todo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -66,6 +76,7 @@
       <module name="demo-jersey" options="-parameters" />
       <module name="demo-mysql-spring-3" options="-parameters" />
       <module name="mytodo" options="-parameters" />
+      <module name="sample-discord-app" options="-parameters" />
       <module name="todo" options="-parameters" />
     </option>
   </component>
