@@ -1,8 +1,10 @@
-package br.com.discord.app.model.pokemon;
+package br.com.discord.app.model.pokemonv2;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Ability{
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Stat{
 
 	@JsonProperty("name")
 	private String name;
@@ -10,16 +12,8 @@ public class Ability{
 	@JsonProperty("url")
 	private String url;
 
-	public void setName(String name){
-		this.name = name;
-	}
-
 	public String getName(){
 		return name;
-	}
-
-	public void setUrl(String url){
-		this.url = url;
 	}
 
 	public String getUrl(){
@@ -29,7 +23,7 @@ public class Ability{
 	@Override
  	public String toString(){
 		return 
-			"Ability{" + 
+			"Stat{" + 
 			"name = '" + name + '\'' + 
 			",url = '" + url + '\'' + 
 			"}";

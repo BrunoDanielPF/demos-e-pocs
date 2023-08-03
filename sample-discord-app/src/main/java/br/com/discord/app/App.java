@@ -13,6 +13,7 @@ import net.dv8tion.jda.api.hooks.EventListener;
  *
  */
 public class App implements EventListener {
+    // class de teste, não executar !!!
     public static void main( String[] args ) throws InterruptedException {
         JDA jdaClient = JDABuilder.createDefault("token")
                 .addEventListeners(new App())
