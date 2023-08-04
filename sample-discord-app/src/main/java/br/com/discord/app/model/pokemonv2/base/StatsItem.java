@@ -1,4 +1,4 @@
-package br.com.discord.app.model.pokemonv2;
+package br.com.discord.app.model.pokemonv2.base;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -15,12 +15,24 @@ public class StatsItem{
 	@JsonProperty("effort")
 	private int effort;
 
+	public void setStat(Stat stat){
+		this.stat = stat;
+	}
+
 	public Stat getStat(){
 		return stat;
 	}
 
+	public void setBaseStat(int baseStat){
+		this.baseStat = baseStat;
+	}
+
 	public int getBaseStat(){
 		return baseStat;
+	}
+
+	public void setEffort(int effort){
+		this.effort = effort;
 	}
 
 	public int getEffort(){

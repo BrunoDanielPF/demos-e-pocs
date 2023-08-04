@@ -1,13 +1,17 @@
-package br.com.discord.app.model.pokemonv2;
+package br.com.discord.app.model.pokemonv2.base;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Sprites{
+public class OfficialArtwork{
 
 	@JsonProperty("front_default")
 	private String frontDefault;
+
+	public void setFrontDefault(String frontDefault){
+		this.frontDefault = frontDefault;
+	}
 
 	public String getFrontDefault(){
 		return frontDefault;
@@ -16,7 +20,7 @@ public class Sprites{
 	@Override
  	public String toString(){
 		return 
-			"Sprites{" + 
+			"OfficialArtwork{" + 
 			"front_default = '" + frontDefault + '\'' + 
 			"}";
 		}
