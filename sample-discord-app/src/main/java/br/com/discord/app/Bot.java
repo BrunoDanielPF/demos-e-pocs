@@ -2,9 +2,6 @@ package br.com.discord.app;
 
 import br.com.discord.app.model.pokemonv2.base.ResponsePokemon;
 import br.com.discord.app.model.pokemonv2.description.ResponseFlavorText;
-import com.google.cloud.translate.Translate;
-import com.google.cloud.translate.TranslateOptions;
-import com.google.cloud.translate.Translation;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -20,7 +17,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.awt.*;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 import static net.dv8tion.jda.api.interactions.commands.OptionType.STRING;
 
@@ -61,16 +58,17 @@ public class Bot extends ListenerAdapter {
     }
 
     private void getPokemon(SlashCommandInteractionEvent event) {
-        AtomicReference<String> descriptionPt = new AtomicReference<>("");
-        final String pokemonId = event.getOption("pokemon").getAsString();
+        Description description = new Description();
+        final String pokemonId = Objects.requireNonNull(event.getOption("pokemon")).getAsString();
         final String PREFIX = "https://pokeapi.co/api/v2/";
         Client client = ClientBuilder.newClient();
         ResponsePokemon response = getResponsePokemon(pokemonId, PREFIX, client);
-//        getDescriptionPokemon(descriptionPt, pokemonId, client);
+        handleDescriptionPokemon(description, pokemonId, client);
+
         EmbedBuilder eb = new EmbedBuilder();
         eb.setTitle("Informações base do Pokemon: " + formatName(response.getName()), null);
         eb.setColor(new Color(173, 11, 255));
-        eb.setDescription(descriptionPt.get());
+        eb.setDescription(description.getText());
         response.getStats().forEach(statsItem -> eb.addField(formatName(statsItem.getStat().getName()), String.valueOf(statsItem.getBaseStat()), true));
         response.getTypes().forEach(type -> eb.addField("Tipo: ", formatName(type.getType().getName()), true));
         eb.addBlankField(false);
@@ -83,30 +81,38 @@ public class Bot extends ListenerAdapter {
         client.close();
     }
 
-    private static ResponsePokemon getResponsePokemon(String pokemonId, String PREFIX, Client client) {
+    private ResponsePokemon getResponsePokemon(String pokemonId, String PREFIX, Client client) {
         WebTarget baseTarget = client.target(PREFIX);
         WebTarget pokemonTarget = baseTarget.path("pokemon").path(pokemonId);
 
         Response respPokemon = pokemonTarget.request(MediaType.APPLICATION_JSON).get();
-        ResponsePokemon response = respPokemon.readEntity(ResponsePokemon.class);
-        return response;
+        return respPokemon.readEntity(ResponsePokemon.class);
     }
 
-    private static void getDescriptionPokemon(AtomicReference<String> descriptionPt, String pokemonId, Client client) {
-        //TODO para habilitar a dependencia de traducao e necessario comprar licenca no google cloud plataform
+    private void handleDescriptionPokemon(Description description, String pokemonId, Client client) {
         WebTarget speciesWebtarget = client.target("https://pokeapi.co/api/v2/pokemon-species/").path(pokemonId);
         Response responseSpeciesWebtarget = speciesWebtarget.request(MediaType.APPLICATION_JSON).get();
         ResponseFlavorText responseFlavorText = responseSpeciesWebtarget.readEntity(ResponseFlavorText.class);
         responseFlavorText.getFlavorTextEntries().forEach(text -> {
-            if(text.getLanguage().getName().equals("en")){
-                Translate translate = TranslateOptions.getDefaultInstance().getService();
-                Translation translation = translate.translate(text.getLanguage().getName(), Translate.TranslateOption.sourceLanguage("en"), Translate.TranslateOption.targetLanguage("pt"));
-                descriptionPt.set(translation.getTranslatedText());
+            if (text.getLanguage().getName().equals("en")) {
+                description.setText(text.getFlavorText());
             }
         });
     }
 
-    private static String formatName(String name) {
+    static class Description {
+        String text;
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+    }
+
+    private String formatName(String name) {
         return StringUtils.capitalize(name);
     }
 
