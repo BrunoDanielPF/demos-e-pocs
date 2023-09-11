@@ -12,16 +12,19 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
+import software.amazon.awssdk.enhanced.dynamodb.Expression;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
+import software.amazon.awssdk.enhanced.dynamodb.model.ScanEnhancedRequest;
+import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 import software.amazon.awssdk.services.dynamodb.model.ResourceInUseException;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Logger;
+
+import static software.amazon.awssdk.enhanced.dynamodb.internal.AttributeValues.numberValue;
+import static software.amazon.awssdk.enhanced.dynamodb.internal.AttributeValues.stringValue;
 
 @Service
 public class CommandRunnerBeanConfiguration {
@@ -44,7 +47,24 @@ public class CommandRunnerBeanConfiguration {
         }
         createItemsMovieActor().forEach(movieActorDynamoDbTable::putItem);
         createItemsCustomer().forEach(customerDynamoDbTable::putItem);
-        createProductCatalog().forEach(productCatalogDynamoDbTable::putItem);
+        createProductCatalog().forEach(item -> productCatalogDynamoDbTable.putItem(putEnhanced -> putEnhanced.item(item)));
+
+
+        Map<String, AttributeValue> expressionValue = Map.of(
+                ":school_name1", stringValue("actingschool4"));
+
+        Map<String, String> expressionNames = Map.of(
+                "#actingschoolname", "actingschoolname"); // Mapeando o nome do atributo
+
+        List<MovieActor> productCatalogs = movieActorDynamoDbTable.scan(ScanEnhancedRequest.builder()
+                .filterExpression(Expression.builder()
+                        .expression("#actingschoolname = :school_name1") // Usando o nome mapeado
+                        .expressionValues(expressionValue)
+                        .expressionNames(expressionNames) // Passando os nomes mapeados
+                        .build())
+                .build()).items().stream().toList();
+        productCatalogs.forEach(System.out::println);
+
 
         BatchOperationsDynamoDb.batchWriteItemExample(dynamoDbEnhancedClient, productCatalogDynamoDbTable, movieActorDynamoDbTable);
         BatchOperationsDynamoDb.batchGetItemExample(dynamoDbEnhancedClient, customerDynamoDbTable, movieActorDynamoDbTable);
@@ -100,7 +120,35 @@ public class CommandRunnerBeanConfiguration {
 
     public List<ProductCatalog> createProductCatalog() {
         return List.of(
-          ProductCatalog.builder().id(1).title("Title 1").isbn("orig_isbn").authors(Set.of("b", "g")).price(BigDecimal.valueOf(10)).build()
+                ProductCatalog.builder().id(1).title("Title 1").isbn("orig_isbn").authors(Set.of("b", "g")).price(BigDecimal.valueOf(10)).build(),
+                ProductCatalog.builder()
+                        .id(2)
+                        .isbn("1-565-85698")
+                        .authors(new HashSet<>(Arrays.asList("a 1", "b 1")))
+                        .price(BigDecimal.valueOf(1.22))
+                        .title("Title 55")
+                        .build(),
+                ProductCatalog.builder()
+                        .id(2)
+                        .isbn("1-565-85698")
+                        .authors(new HashSet<>(Arrays.asList("a 30 ", "b 30")))
+                        .price(BigDecimal.valueOf(30.22))
+                        .title("Title 55")
+                        .build(),
+                ProductCatalog.builder()
+                        .id(2)
+                        .isbn("1-565-85698")
+                        .authors(new HashSet<>(Arrays.asList("a 50", "b 50")))
+                        .price(BigDecimal.valueOf(50.22))
+                        .title("Title 55")
+                        .build(),
+                ProductCatalog.builder()
+                        .id(2)
+                        .isbn("1-565-85698")
+                        .authors(new HashSet<>(Arrays.asList("a 70", "b 70")))
+                        .price(BigDecimal.valueOf(70.22))
+                        .title("Title 55")
+                        .build()
         );
     }
 }
