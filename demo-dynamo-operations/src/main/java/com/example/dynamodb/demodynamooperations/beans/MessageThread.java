@@ -16,6 +16,18 @@ public class MessageThread {
     private Integer Answered;
     private List<String> Tags;
 
+    public MessageThread(String forumName, String subject, String message, String lastPostedBy, String lastPostedDateTime, Integer views, Integer replies, Integer answered, List<String> tags) {
+        ForumName = forumName;
+        Subject = subject;
+        Message = message;
+        LastPostedBy = lastPostedBy;
+        LastPostedDateTime = lastPostedDateTime;
+        Views = views;
+        Replies = replies;
+        Answered = answered;
+        Tags = tags;
+    }
+
     @DynamoDbPartitionKey
     public String getForumName() {
         return ForumName;
@@ -26,7 +38,7 @@ public class MessageThread {
     }
 
     // Sort key for primary index and partition key for GSI "SubjectLastPostedDateIndex".
-    @DynamoDbSortKey
+//    @DynamoDbSortKey
     @DynamoDbSecondaryPartitionKey(indexNames = "SubjectLastPostedDateIndex")
     public String getSubject() {
         return Subject;
@@ -37,7 +49,7 @@ public class MessageThread {
     }
 
     // Sort key for GSI "SubjectLastPostedDateIndex" and sort key for LSI "ForumLastPostedDateIndex".
-    @DynamoDbSecondarySortKey(indexNames = {"SubjectLastPostedDateIndex", "ForumLastPostedDateIndex"})
+//    @DynamoDbSecondarySortKey(indexNames = {"SubjectLastPostedDateIndex", "ForumLastPostedDateIndex"})
     public String getLastPostedDateTime() {
         return LastPostedDateTime;
     }
@@ -69,7 +81,7 @@ public class MessageThread {
         Views = views;
     }
 
-    @DynamoDbSecondaryPartitionKey(indexNames = "ForumRepliesIndex")
+//    @DynamoDbSecondaryPartitionKey(indexNames = "ForumRepliesIndex")
     public Integer getReplies() {
         return Replies;
     }

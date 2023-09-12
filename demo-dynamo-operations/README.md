@@ -7,4 +7,4 @@ métodos da api do dynamodbEnhanced:
 
 - Batch : operações em lote
 - Transaction: : operação que fornece atomicidade, consistencia, isolamento e durabilidade, acronimo(ACID)
-- 
+- Secondary indices
