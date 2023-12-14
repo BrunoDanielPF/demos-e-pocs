@@ -19,6 +19,10 @@ import software.amazon.awssdk.services.sns.SnsClient;
 import software.amazon.awssdk.services.sns.SnsClientBuilder;
 import software.amazon.awssdk.services.sns.model.SubscribeRequest;
 import software.amazon.awssdk.services.sns.model.SubscribeResponse;
+import software.amazon.awssdk.services.sqs.SqsClient;
+import software.amazon.awssdk.services.sqs.model.GetQueueAttributesRequest;
+import software.amazon.awssdk.services.sqs.model.GetQueueAttributesResponse;
+import software.amazon.awssdk.services.sqs.model.QueueAttributeName;
 
 import java.net.URI;
 import java.util.logging.Logger;
@@ -58,6 +62,7 @@ public class DemoStarterSnsApplication {
         public ResponseEntity<Boolean> sendMessage(@PathVariable String message) {
             boolean response = service.sendMessage(message);
             service.subscribeSns();
+            service.subscribeQueue();
             return ResponseEntity.ok(response);
         }
 
@@ -73,11 +78,13 @@ public class DemoStarterSnsApplication {
 
         static final String TOPIC_NAME = "topic-demo";
         private final SnsTemplate snsTemplate;
-        private final SnsClient client;
+        private final SnsClient snsClient;
+        private final SqsClient sqsClient;
 
-        public SnsService(SnsTemplate snsTemplate, SnsClient client) {
+        public SnsService(SnsTemplate snsTemplate, SnsClient snsClient, SqsClient sqsClient) {
             this.snsTemplate = snsTemplate;
-            this.client = client;
+            this.snsClient = snsClient;
+            this.sqsClient = sqsClient;
         }
 
         public boolean sendMessage(String message) {
@@ -90,9 +97,32 @@ public class DemoStarterSnsApplication {
         }
 
         public int subscribeSns() {
-            SubscribeRequest subscribeRequest = SubscribeRequest.builder().endpoint("http://host.docker.internal:4566/sns/receive").protocol("http").topicArn("arn:aws:sns:us-east-2:000000000000:topic-demo").build();
-            SubscribeResponse subscribe = client.subscribe(subscribeRequest);
+            SubscribeRequest subscribeRequest = SubscribeRequest.builder()
+                    .endpoint("http://host.docker.internal:4566/sns/receive")
+                    .protocol("http")
+                    .topicArn("arn:aws:sns:us-east-2:000000000000:topic-demo")
+                    .build();
+            SubscribeResponse subscribe = snsClient.subscribe(subscribeRequest);
             return subscribe.sdkHttpResponse().statusCode();
+        }
+        public int subscribeQueue() {
+            String sqsQueueUrl = "http://sqs.us-east-2.localhost.localstack.cloud:4566/000000000000/my-queue";
+
+            GetQueueAttributesResponse queueAttributesResponse = sqsClient.getQueueAttributes(GetQueueAttributesRequest.builder()
+                    .queueUrl(sqsQueueUrl)
+                    .attributeNames(QueueAttributeName.QUEUE_ARN)
+                    .build());
+
+            String sqsQueueArn = queueAttributesResponse.attributes().get(QueueAttributeName.QUEUE_ARN);
+            SubscribeRequest subscribeRequest = SubscribeRequest.builder()
+                    .protocol("sqs")
+                    .endpoint(sqsQueueArn)
+                    .returnSubscriptionArn(true)
+                    .topicArn("arn:aws:sns:us-east-2:000000000000:topic-demo")
+                    .build();
+
+            SubscribeResponse subscribeResponse = snsClient.subscribe(subscribeRequest);
+            return subscribeResponse.sdkHttpResponse().statusCode();
         }
     }
 

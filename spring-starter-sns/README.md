@@ -13,3 +13,14 @@ aws --endpoint-url http://localhost:4566 sns publish --topic-arn arn:aws:sns:us-
 ```shell
 aws --endpoint-url http://localhost:4566 sns list-messages --topic-arn arn:aws:sns:us-east-2:000000000000:topic-demo
 ```
+
+
+# SQS
+
++ Cria uma fila SQS
+```shell
+aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name my-queue
+```
+
+
+![img.png](img.png)
