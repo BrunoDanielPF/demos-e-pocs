@@ -35,21 +35,24 @@ public class CustomInterceptor implements ExecutionInterceptor {
     @Override
     public SdkRequest modifyRequest(Context.ModifyRequest context, ExecutionAttributes executionAttributes) {
         SdkRequest request = context.request();
-        if (request instanceof PublishRequest) {
+        if (request instanceof PublishRequest publishRequest) {
+            Map<String, MessageAttributeValue> customHeadersAttributes = new HashMap<>();
             try {
-                var publishRequest = (PublishRequest) request;
-                Map<String, MessageAttributeValue> customHeadersAttributes = new HashMap<>(((PublishRequest) request).messageAttributes());
-                customHeadersAttributes.put("Correlation-id", MessageAttributeValue.builder()
-                        .dataType("String")
-                        .stringValue(UUID.randomUUID().toString())
-                        .build());
+                Map<String, MessageAttributeValue> stringMessageAttributeValueMap = publishRequest.messageAttributes();
+                if (!stringMessageAttributeValueMap.containsKey("Correlation-id")) {
+                    customHeadersAttributes.put("Correlation-id", MessageAttributeValue.builder()
+                            .dataType("String")
+                            .stringValue(UUID.randomUUID().toString())
+                            .build());
+                }
+                customHeadersAttributes.putAll(stringMessageAttributeValueMap);
 
                 return publishRequest.toBuilder().messageAttributes(customHeadersAttributes).build();
             } catch (Exception e) {
                 logger.info(e.getMessage());
             }
         }
-        if (!(context.request() instanceof SendMessageRequest)) {
+        if (!(request instanceof SendMessageRequest)) {
             return context.request();
         }
         return null;
