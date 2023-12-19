@@ -22,48 +22,51 @@ import java.util.List;
 @SpringBootApplication
 public class DemoCustomAnnotationApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoCustomAnnotationApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoCustomAnnotationApplication.class, args);
+    }
 
-	@RestController
-	@Validated
-	static class ApiController {
+    @RestController
+    @Validated
+    static class ApiController {
 
-		@GetMapping
-		public List<String> example(@RequestBody @Valid List<@ValidaEmail(message = "email errado burro") String> customer) {
-			return customer;
-		}
+        @GetMapping("/type_use")
+        public List<String> exampleTypeUse(@RequestBody @Valid List<@ValidaEmail(message = "email errado burro") String> customer) {
+            return customer;
+        }
 
-	}
+        @GetMapping("/field")
+        public Customer exampleField(@RequestBody @Valid Customer customer) {
+            return customer;
+        }
+    }
 
-	@ControllerAdvice
-	static class ApiExceptionHandler extends ResponseEntityExceptionHandler {
+    @ControllerAdvice
+    static class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
-		@Override //tratamento de execeção para validação FIELD
-		protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+        @Override //tratamento de execeção para validação FIELD
+        protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 
-			List<ObjectError> errors = ex.getBindingResult().getAllErrors();
-			CustomError customError = null;
-				for (ObjectError error : errors) {
-					customError = new CustomError(error.getDefaultMessage());
-			}
+            List<ObjectError> errors = ex.getBindingResult().getAllErrors();
+            CustomError customError = null;
+            for (ObjectError error : errors) {
+                customError = new CustomError(error.getDefaultMessage());
+            }
 
-			return ResponseEntity.status(status.value()).body(customError);
-		}
+            return ResponseEntity.status(status.value()).body(customError);
+        }
 
-		@ExceptionHandler(ConstraintViolationException.class) // tratamento de exceção para TYPE_USE
-		protected ResponseEntity<Object> handleConstraintViolationException(ConstraintViolationException ex ) {
-			return ResponseEntity.ok(new CustomError(ex.getMessage()));
-		}
+        @ExceptionHandler(ConstraintViolationException.class) // tratamento de exceção para TYPE_USE
+        protected ResponseEntity<Object> handleConstraintViolationException(ConstraintViolationException ex) {
+            return ResponseEntity.ok(new CustomError(ex.getMessage()));
+        }
 
-		@Override
-		protected ResponseEntity<Object> handleHandlerMethodValidationException(HandlerMethodValidationException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
-			return super.handleHandlerMethodValidationException(ex, headers, status, request);
-		}
+        @Override
+        protected ResponseEntity<Object> handleHandlerMethodValidationException(HandlerMethodValidationException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+            return super.handleHandlerMethodValidationException(ex, headers, status, request);
+        }
 
-
-
-		record CustomError(String message) {}
-	}
+        record CustomError(String message) {
+        }
+    }
 }
