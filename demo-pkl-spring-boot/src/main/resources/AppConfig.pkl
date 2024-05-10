@@ -1,0 +1,12 @@
+module br.com.example.pkl.demopklspringboot.AppConfig
+
+server: Server
+
+class Server {
+  endpoints: Listing<Endpoint>
+}
+
+class Endpoint {
+  name: String
+  port: UInt16
+}
