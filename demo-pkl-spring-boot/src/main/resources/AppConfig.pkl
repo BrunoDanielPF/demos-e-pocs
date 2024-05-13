@@ -1,6 +1,23 @@
 module br.com.example.pkl.demopklspringboot.AppConfig
 
 server: Server
+user: User
+customObjectMap: Mapping<String, String>
+featureToggleEnabled: Boolean
+secret: String
+api: Api
+port: Int
+
+class Api {
+  auth: Auth
+}
+class Auth {
+  uri: String
+}
+
+class User {
+  roles: List
+}
 
 class Server {
   endpoints: Listing<Endpoint>

@@ -1,5 +1,24 @@
 amends "AppConfig.pkl"
 
+customObjectMap = new Mapping {
+  ["key"] = "valor"
+}
+
+secret = read?("env:PORT")?.toString() ?? throw("propriedade não encontrado, verifique a criação do recurso na inicialização")
+
+port = 8080
+
+api {
+  auth {
+    uri = if (!secret.isEmpty) "localhost:\(port.toString())" else 9090.toString()
+  }
+}
+user {
+  roles = List("value1","value2")
+}
+
+featureToggleEnabled = true;
+
 server {
   endpoints {
     new {

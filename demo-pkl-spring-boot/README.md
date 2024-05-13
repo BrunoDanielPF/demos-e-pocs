@@ -4,6 +4,14 @@ documentação: https://pkl-lang.org/index.html
 
 > infelizmente ainda não existe uma maneira nativa de compilar o projeto usando PKL no WINDOWS, necessário instalar o WSL
 
+## Beneficios
+- Possibilida de de tratar propriedades com condições caso sejam nulas(`obtidas de fontes externas`).
+- Interpolação sobre propriedades do tipo texto.
+- Possibilidade de obtenção de fontes externas(`Variaveis, Arquivos, http, módulo do classpath`).
+- Capacidade de estourar exceção no momento da obtenção, garantindo rápida identificação de problemas, antes mesmo de gerar eventos na aplicação e causar nullpointer por causa da ausencia de propriedade.
+
+## Desvantagens
+
 ## como executar
 
 ### requisitos obrigatorios
@@ -13,7 +21,8 @@ documentação: https://pkl-lang.org/index.html
 ### para usuário de Windows
 
 primeiro passo: 
-faça a instalação do wsl no windown
+
+faça a instalação do wsl no windows
 ```shell
 wsl --install
 ```
@@ -36,6 +45,20 @@ Com as classes geradas ( lembra muito o proto ) execute a aplicação abaixo:
 .gradlew bootRun
 ```
 
+
+## debug remoto
+
+para debugar, como está no WSL precisa debugar remotamente no intellij.
+
+> ative o application REMOTE JVM DEBUG no intellij
+
+
+em `build/libs` execute o comando abaixo:
+
+```shell
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar demo-pkl-spring-boot-0.0.1-SNAPSHOT.jar
+```
+
 vai retornar o seguinte output 
 ```shell
 2024-05-09 23:58:46.326  INFO 4274 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
@@ -49,5 +72,4 @@ Server {
     port = 5678
   }]
 }
-
 ```
