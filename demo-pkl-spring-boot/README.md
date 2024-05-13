@@ -2,7 +2,8 @@
 
 documentação: https://pkl-lang.org/index.html
 
-> infelizmente ainda não existe uma maneira nativa de compilar o projeto usando PKL no WINDOWS, necessário instalar o WSL
+> infelizmente ainda não existe uma maneira nativa de compilar o projeto usando PKL no WINDOWS, é necessário instalar o WSL
+> - https://github.com/apple/pkl/issues/20
 
 ## Beneficios
 - Possibilida de de tratar propriedades com condições caso sejam nulas(`obtidas de fontes externas`).
@@ -21,8 +22,7 @@ documentação: https://pkl-lang.org/index.html
 ### para usuário de Windows
 
 primeiro passo: 
-
-faça a instalação do wsl no windows
+faça a instalação do wsl no windown
 ```shell
 wsl --install
 ```
