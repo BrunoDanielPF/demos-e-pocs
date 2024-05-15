@@ -27,21 +27,6 @@ public class MessageInterceptorImpl  {
                     Correlation.set((String) headerCorrelation);
                 return MessageInterceptor.super.intercept(message);
             }
-
-            @Override
-            public Collection<Message<Object>> intercept(Collection<Message<Object>> messages) {
-                return MessageInterceptor.super.intercept(messages);
-            }
-
-            @Override
-            public void afterProcessing(Message<Object> message, Throwable t) {
-                MessageInterceptor.super.afterProcessing(message, t);
-            }
-
-            @Override
-            public void afterProcessing(Collection<Message<Object>> messages, Throwable t) {
-                MessageInterceptor.super.afterProcessing(messages, t);
-            }
         };
     }
 }
