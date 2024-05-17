@@ -4,7 +4,7 @@ customObjectMap = new Mapping {
   ["key"] = "valor"
 }
 
-secret = read?("env:PORT")?.toString() ?? throw("propriedade não encontrado, verifique a criação do recurso na inicialização")
+secret = read?("env:PORT")?.toString() ?? "not found"
 
 port = 8080
 
@@ -20,6 +20,7 @@ user {
 featureToggleEnabled = true;
 
 server {
+  port = 9090
   endpoints {
     new {
       name = "endpoint1"
