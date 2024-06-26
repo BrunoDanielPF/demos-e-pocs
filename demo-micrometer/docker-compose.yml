@@ -1,0 +1,9 @@
+services:
+  web:
+    image: "example/spring-boot-graphite"
+    ports:
+      - "8080:8080"
+  graphite:
+    image: "graphiteapp/graphite-statsd"
+    ports:
+      - "80:80"
